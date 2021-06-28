@@ -7,12 +7,8 @@ async function main(){
     setupDefaultControls();
 	//Create a Pixi Application
 	let app = new PIXI.Application({width: 600, height: 800});
+    TitleScreen.loadAssets(app.loader);
     app.loader
-        .add("background", "images/vaporjam/bgwave.gif")
-        .add("bg_grid", "images/vaporjam/magenta-grid-tall.gif")
-        .add("bg_memphis", "images/vaporjam/memphis-colorshocked.png")
-        .add("title", "images/vaporjam/title.png")
-        .add("title_window", "images/vaporjam/window.png")
         .load((bort)=>{
             console.log("load complete", bort);
 

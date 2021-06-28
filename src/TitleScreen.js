@@ -2,8 +2,14 @@ import * as PIXI from 'pixi.js';
 
 export default class TitleScreen{
 
-    static assetsToLoad(){
-
+    static loadAssets(loader){
+        loader
+            .add("background", "images/vaporjam/bgwave.gif")
+            .add("bg_grid", "images/vaporjam/magenta-grid-tall.gif")
+            .add("bg_memphis", "images/vaporjam/memphis-colorshocked.png")
+            .add("title", "images/vaporjam/title.png")
+            .add("title_window", "images/vaporjam/window.png")
+        return loader;
     }
 
     constructor({app}){
