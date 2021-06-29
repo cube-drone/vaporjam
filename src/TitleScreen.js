@@ -38,7 +38,7 @@ export default class TitleScreen{
         
         app.stage.addChild(this.container);
         
-        setTimeout(this.triggerTitleWindow, 3000);
+        setTimeout(this.triggerTitleWindow, 500);
 
         app.ticker.add(this.animate);
     }
@@ -66,6 +66,18 @@ export default class TitleScreen{
         title.x = 240;
         title.y = 130;
         this.container.addChild(title);
+
+        let startText = new PIXI.Text('S T A R T', {
+            fontFamily : 'Arial', 
+            fontSize: 24, 
+            fill : 0xff1010, 
+            align : 'center'
+        });
+        startText.x = 50;
+        startText.y = 400;
+
+        this.container.addChild(startText);
+
     }
 
     stop(){
